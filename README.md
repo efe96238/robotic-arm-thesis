@@ -1,11 +1,11 @@
-# 🤖 ESP32 Robotic Arm – Dual Joystick Controlled 
+# ESP32 Robotic Arm – Dual Joystick Controlled 
 
 A 5-DOF robotic arm controlled by two analog joysticks using an **ESP32**, **PCA9685 servo driver**, and **high-torque DS3218MG servos**.  
 Developed in **ESP-IDF (FreeRTOS)** with smooth, position-holding motion and toggle-based gripper control.
 
 ---
 
-## 🦾 Features
+## Features
 - **5 servo axes**
   - Base, Shoulder, Elbow (DS3218MG)
   - Wrist, Gripper (MG90S)
@@ -22,7 +22,7 @@ Developed in **ESP-IDF (FreeRTOS)** with smooth, position-holding motion and tog
 
 ---
 
-## ⚙️ Hardware Setup
+## Hardware Setup
 
 | Component | Description |
 |------------|-------------|
@@ -39,7 +39,7 @@ Developed in **ESP-IDF (FreeRTOS)** with smooth, position-holding motion and tog
 
 ---
 
-## 🧠 Control Logic
+## Control Logic
 
 - Servos receive **PWM at 50 Hz (20 ms period)** — standard for RC servos.  
 - ESP32 reads each joystick axis (0–4095 ADC) → converted to ±1 normalized range.  
@@ -56,7 +56,7 @@ gripper_us = gripper_closed ? GRIPPER_ACTIVE_US : GRIPPER_HOME_US;
 
 ---
 
-## 🧩 Pin Mapping
+## Pin Mapping
 
 | Function | GPIO | Description |
 |-----------|------|-------------|
@@ -79,7 +79,7 @@ gripper_us = gripper_closed ? GRIPPER_ACTIVE_US : GRIPPER_HOME_US;
 
 ---
 
-## 🧱 Mechanical Design
+## Mechanical Design
 - Base box holds **ESP32**, **buck converters**, **fuse**, and **battery**.  
 - One **15 cm arm joint** (shoulder).  
 - One **13 cm arm joint** (elbow).
@@ -88,7 +88,7 @@ gripper_us = gripper_closed ? GRIPPER_ACTIVE_US : GRIPPER_HOME_US;
 
 ---
 
-## 🚀 Build & Flash
+## Build & Flash
 ```bash
 idf.py build
 idf.py -p COMx flash
@@ -98,7 +98,7 @@ idf.py monitor
 
 ---
 
-## 📄 License
+## License
 Released under the **MIT License**.
 
 ---
